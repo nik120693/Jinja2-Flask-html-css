@@ -1,0 +1,59 @@
+{# templates/base.html #}
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Client's Manager</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+  <div class="mainContainer">
+
+          <div class="leftContainer">
+            
+              <div class="firstColumn">
+                  <button type="button" class="buttons"> 
+                        <nav>
+                          <a href="{{url_for('adduser')}}">ADD USER</a>
+                        </nav>
+                  </button>
+                  <button type="button"class="buttons"> 
+                        <nav>
+                          <a href="{{url_for('rmuser')}}">REMOVE USER</a>
+                        </nav>
+                  </button>
+                  <button type="button" class="buttons"> 
+                    <nav>
+                      <a href="{{url_for('eduser')}}">EDIT USER</a>
+                    </nav>
+                  </button>
+                  <button type="button" class="buttons" style="background-color: black"> 
+                    <nav>
+                      <a href="{{url_for('home')}}">HOME</a>
+                    </nav>
+                  </button>
+              </div>
+
+          </div>
+
+
+          <div class="rightContainer">
+
+
+
+          </div>
+  </div>
+
+</body>
+
+</html>
