@@ -47,21 +47,25 @@
           </div>
 
 
-          <div class="rightContainer">
+            <form method="post" class="rightContainer">
 
                         <div class="usernameContainer">
-                        <label style="display: text">Username:</label>
-                        <input id="username" name="username" required type="text" value="" style="height: 50px; font-size: large;">
-                        <label value="password" style="display: text">Password:</label> 
-                        <input id="password" name="password" required type="text" value="" style="height: 50px; font-size: large;">
+                          <label style="display: text">Username:</label>
+                          
+                          <input id="username" name="username" required type="text" value="" style="height: 50px; font-size: large; border-color: rgb(0, 94, 234);">
+                        
+                          <label value="password" style="display: text; margin-top: 2%;">Password:</label> 
+                        
+                          <input id="password" name="password" required type="password" value="" style="height: 50px; font-size: large; border-color: rgb(0, 94, 234);">
                         </div>
                         
 
             <div class="buttonSave">
-                <button type="button" class="buttons" username="{{username}}" password="{{password}}">SAVE</button>
+               
+              <button type="submit" class="buttons" username="{{username}}" password="{{password}}" style="margin-top: 20%">SAVE</button>
+            
             </div>
-                        
-        </div>
+            </form>            
   </div>
 
 </body>

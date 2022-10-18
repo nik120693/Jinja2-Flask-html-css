@@ -1,6 +1,7 @@
 # app.py
 
-from flask import Flask, render_template
+from crypt import methods
+from flask import Flask, render_template, request
 import os, subprocess, sys, getpass
 
 app = Flask(__name__)
@@ -13,6 +14,23 @@ def home():
 def adduser():    
     return render_template("adduser.html")
 
+@app.route("/adduser", methods=['POST'])
+def add_user():
+  
+     # Ask for the input
+     username = request.form['username']
+     print(username)   
+  
+     # Asking for users password
+     password = request.form['password']
+     print(password)    
+     try:
+         # executing useradd command using subprocess module
+         subprocess.run(['useradd', '-p', password, username ])      
+     except:
+         print(f"Failed to add user.")                     
+         sys.exit(1)
+
 @app.route("/rmuser")
 def rmuser():
     return render_template("rmuser.html")
@@ -21,20 +39,7 @@ def rmuser():
 def eduser():
     return render_template("eduser.html")
 
-def add_user():
-  
-     # Ask for the input
-     username = input("Enter Username ")   
-  
-     # Asking for users password
-     password = getpass.getpass()
-         
-     try:
-         # executing useradd command using subprocess module
-         subprocess.run(['useradd', '-p', password, username ])      
-     except:
-         print(f"Failed to add user.")                     
-         sys.exit(1)
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=8000, debug=True)
