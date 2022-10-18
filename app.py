@@ -41,6 +41,7 @@ def removeUser():
     name = request.form['name']
     os.system("sudo deluser --remove-home "+name)
     print("User deleted")
+    return home()
     
 @app.route("/eduser")
 def eduser():
