@@ -22,26 +22,26 @@
           <div class="leftContainer">
             
               <div class="firstColumn">
-                  <button type="button" class="buttons" style="background-color: black"> 
                         <nav>
-                          <a href="{{url_for('adduser')}}">ADD USER</a>
+                          <a href="{{url_for('adduser')}}">
+                          <button type="button" class="buttons" style="background-color: black">ADD USER</button>
+                          </a>
                         </nav>
-                  </button>
-                  <button type="button"class="buttons"> 
                         <nav>
-                          <a href="{{url_for('rmuser')}}">REMOVE USER</a>
+                          <a href="{{url_for('rmuser')}}">
+                          <button type="button"class="buttons">REMOVE USER</button>
+                          </a>
                         </nav>
-                  </button>
-                  <button type="button" class="buttons"> 
-                    <nav>
-                      <a href="{{url_for('eduser')}}">EDIT USER</a>
-                    </nav>
-                  </button>
-                  <button type="button" class="buttons"> 
-                    <nav>
-                      <a href="{{url_for('home')}}">HOME</a>
-                    </nav>
-                  </button>
+                        <nav>
+                          <a href="{{url_for('eduser')}}">                 
+                          <button type="button" class="buttons">EDIT USER</button>
+                          </a>
+                        </nav>
+                        <nav>
+                          <a href="{{url_for('home')}}">
+                          <button type="button" class="buttons">HOME</button>
+                          </a>
+                        </nav>
               </div>
 
           </div>
@@ -50,14 +50,12 @@
           <div class="rightContainer">
 
                         <div class="usernameContainer">
-                        User name:
-                        <input id="name" name="name" required type="text" value="" style="height: 50px; font-size: large;">
+                        <label style="display: text">Username:</label>
+                        <input id="username" name="username" required type="text" value="" style="height: 50px; font-size: large;">
+                        <label value="password" style="display: text">Password:</label> 
+                        <input id="password" name="password" required type="text" value="" style="height: 50px; font-size: large;">
                         </div>
-
-                        <div class="passwordContainer">
-                        Password:  
-                        <input id="name" name="name" required type="text" value="" style="height: 50px; font-size: large;">
-                        </div>
+                        
 
             <div class="buttonSave">
                 <button type="button" class="buttons" username="{{username}}" password="{{password}}">SAVE</button>

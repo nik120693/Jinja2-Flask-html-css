@@ -21,28 +21,28 @@
 
           <div class="leftContainer">
             
-              <div class="firstColumn">
-                  <button type="button" class="buttons"> 
-                        <nav>
-                          <a href="{{url_for('adduser')}}">ADD USER</a>
-                        </nav>
-                  </button>
-                  <button type="button"class="buttons" style="background-color: black"> 
-                        <nav>
-                          <a href="{{url_for('rmuser')}}">REMOVE USER</a>
-                        </nav>
-                  </button>
-                  <button type="button" class="buttons"> 
-                    <nav>
-                      <a href="{{url_for('eduser')}}">EDIT USER</a>
-                    </nav>
-                  </button>
-                  <button type="button" class="buttons"> 
-                    <nav>
-                      <a href="{{url_for('home')}}">HOME</a>
-                    </nav>
-                  </button>
-              </div>
+            <div class="firstColumn">
+              <nav>
+                <a href="{{url_for('adduser')}}">
+                <button type="button" class="buttons">ADD USER</button>
+                </a>
+              </nav>
+              <nav>
+                <a href="{{url_for('rmuser')}}">
+                <button type="button"class="buttons" style="background-color: black">REMOVE USER</button>
+                </a>
+              </nav>
+              <nav>
+                <a href="{{url_for('eduser')}}">                 
+                <button type="button" class="buttons">EDIT USER</button>
+                </a>
+              </nav>
+              <nav>
+                <a href="{{url_for('home')}}">
+                <button type="button" class="buttons">HOME</button>
+                </a>
+              </nav>
+    </div>
 
           </div>
 
