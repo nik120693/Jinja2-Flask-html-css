@@ -26,7 +26,8 @@ def add_user():
      print(password)    
      try:
          # executing useradd command using subprocess module
-         subprocess.run(['useradd', '-p', password, username ])      
+         subprocess.run(['useradd', '-p', password, username ])
+         return home()    
      except:
          print(f"Failed to add user.")                     
          sys.exit(1)
@@ -35,6 +36,12 @@ def add_user():
 def rmuser():
     return render_template("rmuser.html")
 
+@app.route("/rmuser", methods=['POST'])
+def removeUser():
+    name = request.form['name']
+    os.system("sudo deluser --remove-home "+name)
+    print("User deleted")
+    
 @app.route("/eduser")
 def eduser():
     return render_template("eduser.html")
