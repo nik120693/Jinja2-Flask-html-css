@@ -1,4 +1,4 @@
-# Jinja2-Flask-html-css
+# Installation Guide
 
 - python3 -m venv venv
 - source venv/bin/activate
